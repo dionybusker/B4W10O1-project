@@ -27,7 +27,7 @@ function edit($id) {
     // variabele om een specifieke user op te halen uit de database
     // juiste pagina weergeven in de view
     $users = getUser($id);
-    render('users/update', array('users' => $users);
+    render('users/update', array('users' => $users));
 }
 
 // functie update($id) doet de al bestaande gegevens uit de database updaten
