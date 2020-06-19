@@ -26,8 +26,8 @@ function createGame($data) {
     // if($data['game_name']!=NULL){
         // try {
 
-$conn = openDataBaseConnection();
-$insert = $conn->prepare("INSERT  INTO `games` (`game_name`, `developer`, `img`, `publisher`, `genre` , `total_spots`) VALUES ( :game_name, :developer, :img, :publisher, :genre, :total_spots)");
+$conn = openDatabaseConnection();
+$insert = $conn->prepare("INSERT INTO games (game_name, developer, img, publisher, genre_id, total_spots) VALUES (:game_name, :developer, :img, :publisher, :genre, :total_spots)");
 $insert->bindParam(':game_name', $data["game_name"]);
 $insert->bindParam(':img', $data["img"]);
 $insert->bindParam(':developer', $data["developer"]);

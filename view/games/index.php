@@ -21,7 +21,36 @@ foreach($games as $result){ ?>
 
 <? } ?>
 	
-		
+<table class="table">
+    <tr>
+        <th>game</th>
+        <th>developer</th>
+        <th>publisher</th>
+        <th>genre</th>
+        <th> plekken</th>
+        <th></th>
+        <th></th>
+    </tr>
+    <?php foreach ($games as $result) { ?>
+        <tr>
+            <td><?php echo $result["full_name"] ?></td>
+            <td><?php echo $result["age"] ?></td>
+            <td><?php echo $result["email"] ?></td>
+            <td><?php echo $result["phone"] ?></td>
+            <td>
+                <a class="p-1 btn btn-secondary" href="#">
+                    <i class="fas fa-edit"></i>
+                </a>
+            </td>
+            <td>
+                <a class="p-1 btn btn-danger" href="#">
+                    <i class="fas fa-trash-alt"></i>
+                </a>
+            </td>
+        </tr>
+    <?php } ?>
+</table>
+
 	</div>
     
 	<button><a href="<?=URL?>games/create">voeg een game toe</a></button>

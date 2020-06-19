@@ -1,8 +1,8 @@
 <h1>voeg een game toe</h1>
-<form name="create" method="post" action="<?=URL?>games/store">
+<form name="create" method="post" action="store">
 	<!-- bouw hier je formulier -->
 	
-<input type="hidden" name="id">
+
 
 
 
@@ -10,6 +10,7 @@
 <label for="">game</label>
 <input type="text" name="game_name" class="form-control"value="<?=$result["game_name"]?>" required>
 </div>
+
 <div class="form-group">
 <label for="">img</label>
 <input type="text" name="img" class="form-control"value="<?=$result["img"]?>" required>
@@ -27,7 +28,7 @@
 
 <div class="form-group">
 <label for="">genre</label>
-<textarea type="text" name="genre" class="form-control"value="<?=$result["genre"]?>" required></textarea>
+<input type="text" name="genre" class="form-control"value="<?=$result["genre"]?>" required>
 </div>
 
 <div class="form-group">
@@ -46,12 +47,6 @@
 
    
      
-  </div>
-
-
-
-  </div>
-</form>
-
 
 </form>
+
