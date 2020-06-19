@@ -4,10 +4,17 @@
 define('DB_TYPE', 'mysql');		// Wat voor type database gebruik je?
 define('DB_HOST', '127.0.0.1'); // Wat is het IP adres van de server (127.0.0.1 is de lokae machine)
 define('DB_NAME', 'b4w10o1-project'); // Wat is de database naam
-define('DB_USER', 'project'); 		// Wat is de database gebruiker
-define('DB_PASS', 'kever1234');			// Wat is het database wachtwoord
+
+//KIMBERLY
+// define('DB_USER', 'project'); 		// Wat is de database gebruiker
+// define('DB_PASS', 'kever1234');			// Wat is het database wachtwoord
+//DIONY
 // define('DB_USER', 'root'); 		
-// define('DB_PASS', '');			
+// define('DB_PASS', '');	
+//MERIJN
+define('DB_USER', 'root'); 		
+define('DB_PASS', 'mysql');	
+
 define('DB_CHARSET', 'utf8'); 	// Welke karakterset wordt gebruikt
 
 define('URL_PUBLIC_FOLDER', 'public');	// De public folder is de folder waar alle bestanden in staan die via de adresbalk direct aangevraagd kunnen worden, denk aan CSS, JS, afbeeldingen etc...
