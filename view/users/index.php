@@ -23,12 +23,12 @@
             <td><?php echo $result["email"] ?></td>
             <td><?php echo $result["phone"] ?></td>
             <td>
-                <a class="p-1 btn btn-secondary" href='<?= URL ?>users/update'>
+                <a class="p-1 btn btn-secondary" href='<?= URL ?>users/update<?= $result['id'] ?>'>
                     <i class='fas fa-edit'>Update</i>
                 </a>
             </td>
             <td>
-                <a class='p-1 btn btn-danger' href='<?= URL ?>users/delete'>
+                <a class='p-1 btn btn-danger' href='<?= URL ?>users/delete<?= $result['id'] ?>'>
                     <i class='fas fa-trash-alt'>Delete</i>
                 </a>
             </td>
