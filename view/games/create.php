@@ -41,6 +41,18 @@
 </div>
 
 
+<div class="form-group">
+<label for="">platform</label>
+<input type="text" name="platform" class="form-control" required>
+</div>
+
+<div class="form-group">
+<label for="">description</label>
+<textarea type="text" name="description" class="form-control" required></textarea>
+</div>
+
+
+
 
 
 
