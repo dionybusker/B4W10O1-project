@@ -5,6 +5,7 @@ require(ROOT . "model/UsersModel.php");
 function index() {
     // variabele om alle users op te vragen
     // juiste pagina weergeven in de view
+    render("users/index");
 }
 
 // functie create() laat de juiste pagina zien in de view
