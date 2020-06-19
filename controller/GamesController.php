@@ -4,19 +4,16 @@ require(ROOT . "model/GamesModel.php");
 
 function index() {
     // variabele om alle games op te vragen
+    $games = getAllGames();
     // juiste pagina weergeven in de view
-    render("games/index", array(
-		'games' => getAllGames()
-	));
+    render("games/index", array('games' => $games));
 }
 
 // functie create() laat de juiste pagina zien in de view
 function create() {
     // juiste pagina weergeven in de view
-    
-	render("games/create", array(
-		'games' => getAllGames()
-	));
+    $genres = getAllGenres();
+	render("games/create", array('genres' => $genres));
 }
 
 // functie store() slaat de gegevens van het formulier op
