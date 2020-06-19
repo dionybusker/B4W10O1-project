@@ -9,11 +9,11 @@ define('DB_NAME', 'b4w10o1-project'); // Wat is de database naam
 		// Wat is de database gebruiker
 			// Wat is het database wachtwoord
 //DIONY
-// define('DB_USER', 'root'); 		
-// define('DB_PASS', '');	
-//MERIJN
 define('DB_USER', 'root'); 		
-define('DB_PASS', 'mysql');	
+define('DB_PASS', '');	
+//MERIJN
+// define('DB_USER', 'root'); 		
+// define('DB_PASS', 'mysql');	
 		
 define('DB_CHARSET', 'utf8'); 	// Welke karakterset wordt gebruikt
 
