@@ -5,17 +5,26 @@ require(ROOT . "model/GamesModel.php");
 function index() {
     // variabele om alle games op te vragen
     // juiste pagina weergeven in de view
+    render("games/index", array(
+		'games' => getAllGames()
+	));
 }
 
 // functie create() laat de juiste pagina zien in de view
 function create() {
     // juiste pagina weergeven in de view
+    
+	render("games/create", array(
+		'games' => getAllGames()
+	));
 }
 
 // functie store() slaat de gegevens van het formulier op
 function store() {
     // gegevens van het formulier opslaan
     // doorverwijzen naar de juiste pagina
+    createGame($_POST);
+header('Location: '. URL);
 }
 
 // functie edit($id) laat de juiste pagina zien met het correcte id
