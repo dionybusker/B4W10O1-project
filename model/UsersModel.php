@@ -26,7 +26,7 @@ function getUser($id) {
 function createUser($data) {
     // functie om een user aan te maken en opslaan in de database
     $conn = openDataBaseConnection();
-           $insert = $conn->prepare("INSERT INTO reservering (id, full_name, age, email, phone) VALUES (null, :full_name, :age, :email, :phone)");
+           $insert = $conn->prepare("INSERT INTO users (id, full_name, age, email, phone) VALUES (null, :full_name, :age, :email, :phone)");
            $insert->bindParam(':full_name', $data['full_name']);
            $insert->bindParam(':age', $data['age']);
 		   $insert->bindParam(':email', $data['email']);
@@ -38,7 +38,7 @@ function createUser($data) {
 function updateUser($id, $data) {
     // functie om een bestaande user uit de database te bewerken
     $conn = openDataBaseConnection();
-           $insert = $conn->prepare("UPDATE reservering SET full_name = :fullname, age = :age, email = :email, phone = :phone where id =:id");
+           $insert = $conn->prepare("UPDATE users SET full_name = :fullname, age = :age, email = :email, phone = :phone where id =:id");
            $insert->bindParam(':id', $data['id']);
            $insert->bindParam(':full_name', $data['full_name']);
            $insert->bindParam(':age', $data['age']);
@@ -52,7 +52,7 @@ function deleteUser($id) {
     // functie om een specifieke user te verwijderen uit de database
     if($_POST['input'] == 'bevestigd') {  
         $conn = openDataBaseConnection();
-        $insert = $conn->prepare("DELETE FROM reservering WHERE id = :id");
+        $insert = $conn->prepare("DELETE FROM users WHERE id = :id");
         $insert->bindParam(':id', $id);
         $output = $insert->execute();
         $conn = null;
