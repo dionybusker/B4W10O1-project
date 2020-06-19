@@ -11,7 +11,8 @@ function index() {
 // functie create() laat de juiste pagina zien in de view
 function create() {
     // juiste pagina weergeven in de view
-    render('users/create');
+    $users = getAllUsers();
+    render('users/create', array('users' => $users));
 }
 
 // functie store() slaat de gegevens van het formulier op
