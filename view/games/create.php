@@ -8,32 +8,36 @@
 
 <div class="form-group">
 <label for="">game</label>
-<input type="text" name="game_name" class="form-control"value="<?=$result["game_name"]?>" required>
+<input type="text" name="game_name" class="form-control" required>
 </div>
 
 <div class="form-group">
 <label for="">img</label>
-<input type="text" name="img" class="form-control"value="<?=$result["img"]?>" required>
+<input type="text" name="img" class="form-control" required>
 </div>
    
 <div class="form-group">
 <label for="">developer</label>
-<input type="text" name="developer" class="form-control"value="<?=$result["developer"]?>" required>
+<input type="text" name="developer" class="form-control" required>
 </div>
 
 <div class="form-group">
 <label for="">publisher</label>
-<input type="text" name="publisher" class="form-control"value="<?=$result["publisher"]?>" required>
+<input type="text" name="publisher" class="form-control" required>
 </div>
 
 <div class="form-group">
 <label for="">genre</label>
-<input type="text" name="genre" class="form-control"value="<?=$result["genre"]?>" required>
+<select name="genre" id="genre">
+<?php foreach ($genres as $genre) { ?>
+  <option value="<?php echo $genre["genre_id"] ?>"><?php echo $genre["genre"] ?></option>
+<?php } ?>
+</select>
 </div>
 
 <div class="form-group">
 <label for="">aantal plekken</label>
-<input type="text" name="total_spots" class="form-control"value="<?=$result["total_spots"]?>" required>
+<input type="text" name="total_spots" class="form-control" required>
 </div>
 
 

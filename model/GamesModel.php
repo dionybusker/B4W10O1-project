@@ -2,20 +2,24 @@
 
 function getAllGenres() {
     // functie om alle genres op te halen uit de database
+    $conn = openDatabaseConnection();
+    
+    $query = $conn->prepare("SELECT * FROM genres");
+    $query->execute();
+
+    return $query->fetchAll();
 }
 
 function getAllGames() {
     // functie om alle games op te halen uit de database
-    $db = openDatabaseConnection();
+    $conn = openDatabaseConnection();
 
-	$sql = "SELECT * FROM games";
-	$query = $db->prepare($sql);
-	$query->execute();
-
-	$db = null;
-
-	return $query->fetchAll();
-
+    $query = $conn->prepare("SELECT games.*, genres.*
+                             FROM games
+                             JOIN genres ON genres.genre_id = games.genre_id");
+    $query->execute();
+    
+    return $query->fetchAll();
 }
 
 function getGame($id) {
@@ -26,15 +30,15 @@ function createGame($data) {
     // if($data['game_name']!=NULL){
         // try {
 
-$conn = openDatabaseConnection();
-$insert = $conn->prepare("INSERT INTO games (game_name, developer, img, publisher, genre_id, total_spots) VALUES (:game_name, :developer, :img, :publisher, :genre, :total_spots)");
-$insert->bindParam(':game_name', $data["game_name"]);
-$insert->bindParam(':img', $data["img"]);
-$insert->bindParam(':developer', $data["developer"]);
-$insert->bindParam(':publisher', $data["publisher"]);
-$insert->bindParam(':genre', $data["genre"]);
-$insert->bindParam(':total_spots', $data["total_spots"]);
- $insert->execute();
+    $conn = openDatabaseConnection();
+    $insert = $conn->prepare("INSERT INTO games (game_name, developer, img, publisher, genre_id, total_spots) VALUES (:game_name, :developer, :img, :publisher, :genre, :total_spots)");
+    $insert->bindParam(':game_name', $data["game_name"]);
+    $insert->bindParam(':img', $data["img"]);
+    $insert->bindParam(':developer', $data["developer"]);
+    $insert->bindParam(':publisher', $data["publisher"]);
+    $insert->bindParam(':genre', $data["genre"]);
+    $insert->bindParam(':total_spots', $data["total_spots"]);
+    $insert->execute();
 
 
 
