@@ -2,11 +2,9 @@
     <h1>Welkom op bij de users</h1>
     <p>Je bent nu in users/index</p>
 </div>
-<nav>
-	<ul>
-		<li><a href="<?= URL ?>users/create">Create</a></li>
-	</ul>
-	</nav>
+
+<a class="my-2 btn btn-secondary rounded-0" href="<?= URL ?>users/create">Create</a>
+
 <table class="table">
     <tr>
         <th>Full name</th>
