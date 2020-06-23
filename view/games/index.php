@@ -15,8 +15,9 @@
         <th>Genre</th>
         <th>Platform</th>
         <th>Plekken</th>
-        <th></th>
-        <th></th>
+        <th></th> <!-- detail page -->
+        <th></th> <!-- edit page -->
+        <th></th> <!-- delete page -->
     </tr>
     <?php foreach ($games as $result) { ?>
         <tr>
@@ -31,6 +32,11 @@
             <td><?php echo $result["genre"] ?></td>
             <td><?php echo $result["platform"] ?></td>
             <td><?php echo $result["total_spots"] ?></td>
+            <td>
+                <a class="p-1 btn btn-info" href="#">
+                    <i class="fas fa-gamepad"></i>
+                </a>
+            </td>
             <td>
                 <a class="p-1 btn btn-secondary" href="#">
                     <i class="fas fa-edit"></i>

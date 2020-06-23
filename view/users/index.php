@@ -11,8 +11,9 @@
         <th>Age</th>
         <th>Email</th>
         <th>Phone</th>
-        <th></th>
-        <th></th>
+        <th></th> <!-- detail page -->
+        <th></th> <!-- edit page -->
+        <th></th> <!-- delete page -->
     </tr>
     <?php foreach ($users as $result) { ?>
         <tr>
@@ -20,6 +21,11 @@
             <td><?php echo $result["age"] ?></td>
             <td><?php echo $result["email"] ?></td>
             <td><?php echo $result["phone"] ?></td>
+            <td>
+                <a class="p-1 btn btn-info" href="#">
+                    <i class="fas fa-user-alt"></i>
+                </a>
+            </td>
             <td>
                 <a class="p-1 btn btn-secondary" href='<?= URL ?>users/edit/<?= $result['id'] ?>'>
                     <i class='fas fa-edit'></i>
