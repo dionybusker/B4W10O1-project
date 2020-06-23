@@ -33,9 +33,9 @@
             <td><?php echo $game["genre"] ?></td>
             <td><?php echo $game["platform"] ?></td>
             <td><?php echo $game["total_spots"] ?></td>
-            <img class="img-fluid" src="<?php echo URL ?>img/<?php echo $game["img"] ?>" alt="">
+            <img class="img-fluid" src="<?php echo URL ?>img/games/<?php echo $game["img"] ?>" alt="">
             <td>
-            
+
             </td>
             <td>
                 <a class="p-1 btn btn-secondary" href="<?=URL?>games/edit/<?= $game['id'] ?>">
