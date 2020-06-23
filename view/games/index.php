@@ -1,5 +1,5 @@
 <div>
-<button><a href="<?=URL?>games/create">voeg een game toe</a></button>
+<a class="my-2 btn btn-secondary rounded-0" href="<?=URL?>games/create">voeg een game toe</a>
 
 <div class="col-12 row">
 
