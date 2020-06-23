@@ -19,8 +19,8 @@ function create() {
 function store() {
     // gegevens van het formulier opslaan
     // doorverwijzen naar de juiste pagina
-    $createUser = createUser($_POST);
-   header('location: ' . URL . 'users/index');
+    createUser($_POST);
+    header('location: ' . URL . 'users/index');
 }
 
 // functie edit($id) laat de juiste pagina zien met het correcte id
@@ -35,8 +35,7 @@ function edit($id) {
 function update($id) {
     // gegevens van het formulier updaten in de database
     // doorverwijzen naar de juiste pagina
-    $updateUser = updateUser($_POST);
-	
+    $updateUser = updateUser($id, $_POST);
     header('location: ' . URL . 'users/index');
 }
 

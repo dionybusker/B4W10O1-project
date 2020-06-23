@@ -35,11 +35,11 @@ function createUser($data) {
            $conn = null;  
 }
 
-function updateUser($data) {
+function updateUser($id, $data) {
     // functie om een bestaande user uit de database te bewerken
     $conn = openDataBaseConnection();
            $insert = $conn->prepare("UPDATE users SET full_name = :fullname, age = :age, email = :email, phone = :phone where id =:id");
-           $insert->bindParam(':id', $data['id']);
+           $insert->bindParam(':id', $id);
            $insert->bindParam(':full_name', $data['full_name']);
            $insert->bindParam(':age', $data['age']);
 		   $insert->bindParam(':email', $data['email']);
