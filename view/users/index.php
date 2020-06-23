@@ -20,7 +20,7 @@
             <td><?php echo $result["full_name"] ?></td>
             <td><?php echo $result["age"] ?></td>
             <td><?php echo $result["email"] ?></td>
-            <td><?php echo $result["phone"] ?></td>
+            <td>+31 <?php echo $result["phone"] ?></td>
             <td>
                 <a class="p-1 btn btn-info" href="#">
                     <i class="fas fa-user-alt"></i>
