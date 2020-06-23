@@ -6,7 +6,7 @@
     <input class="col-4" type="text" name="game_name">
 
     <label class="col-4">Image</label>
-    <input class="col-4" type="text" name="img">
+    <input class="col-4" type="text" name="img" placeholder="e.g. game.png">
 
     <label class="col-4">Developer</label>
     <input class="col-4" type="text" name="developer">
