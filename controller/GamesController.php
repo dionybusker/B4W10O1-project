@@ -24,8 +24,43 @@ function create() {
 function store() {
     // gegevens van het formulier opslaan
     // doorverwijzen naar de juiste pagina
-    createGame($_POST);
-header('Location: '. URL);
+
+    $fields = ["game", "img", "developer", "publisher", "genre", "platform", "totalspots", "description"];
+
+    $class = [];
+    $data = [];
+
+    $class["game"] = $data["game"] = "";
+    $class["img"] = $data["img"] = "";
+    $class["developer"] = $data["developer"] = "";
+    $class["publisher"] = $data["publisher"] = "";
+    $class["genre"] = $data["genre"] = "";
+    $class["platform"] = $data["platform"] = "";
+    $class["totalspots"] = $data["totalspots"] = "";
+    $class["description"] = $data["description"] = "";
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $valid = true;
+
+        foreach ($fields as $field) {
+            if (isset($_POST[$field]) && empty($_POST[$field])) {
+                $class[$field] = "is-invalid";
+                $valid = false;
+                header("Location: " . URL . "games/create");
+            } else {
+                $data[$field] = $_POST[$field];
+            }
+        }
+
+        if ($valid == true) {
+            createGame($_POST);
+            header("Location: " . URL . "games/index");
+        }
+    }
+    
+
+    // createGame($_POST);
+    // header("Location: ". URL . "games/index");
 }
 
 // functie edit($id) laat de juiste pagina zien met het correcte id
