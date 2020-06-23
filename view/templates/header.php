@@ -13,6 +13,15 @@
 	</head>
 	<body class="bg-custom-img">
         <div class="row col-12 m-0 p-0">
+            <div class="col-12 bg-custom py-2 text-right">
+                <a class="mx-2 text-white" href="https://github.com/dionybusker/B4W10O1-project" target="_blank" title="Our Github repository">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a class="mx-2 text-white" href="https://trello.com/b/BXjwJVmJ" target="_blank" title="Our Trello board">
+                    <i class="fab fa-trello"></i>
+                </a>
+            </div>
+            
             <nav class="col-lg-2 bg-custom">
                 <div class="col-lg-12 p-0">
                     <a class="navbar-brand col-lg-12 col-sm-6 m-0 p-0" href="<?php echo URL ?>home/index">
@@ -36,14 +45,7 @@
             </nav>
 
                 <div id="page-container" class="col-10 m-0 p-0">
-                    <div class="col-12 bg-custom py-2 text-right">
-                        <a class="mx-2 text-white" href="https://github.com/dionybusker/B4W10O1-project" target="_blank" title="Our Github repository">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a class="mx-2 text-white" href="https://trello.com/b/BXjwJVmJ" target="_blank" title="Our Trello board">
-                            <i class="fab fa-trello"></i>
-                        </a>
-                    </div>
+
 
                     <div class="row col-12 m-0 p-0">
                         <!-- rest van de pages -->
