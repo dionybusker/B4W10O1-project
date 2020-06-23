@@ -67,7 +67,10 @@ function store() {
 function edit($id) {
     // variabele om een specifieke game op te halen uit de database
     // juiste pagina weergeven in de view
+    $genres = getAllGenres();
     $games = getAllGames($id);
+    $platforms = getAllPlatforms();
+
     render("games/update", array(
         'genres' => $genres,
         'platforms' => $platforms
