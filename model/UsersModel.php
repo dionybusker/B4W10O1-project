@@ -50,12 +50,18 @@ function updateUser($id, $data) {
 
 function deleteUser($id) {
     // functie om een specifieke user te verwijderen uit de database
-    if($_POST['input'] == 'bevestigd') {  
-        $conn = openDataBaseConnection();
-        $insert = $conn->prepare("DELETE FROM users WHERE id = :id");
-        $insert->bindParam(':id', $id);
-        $output = $insert->execute();
-        $conn = null;
-        return $output;
+    $conn = openDatabaseConnection();
+    $query = $conn->prepare("SELECT * FROM users WHERE id = :id");
+    $query->bindParam(":id", $id);
+    $query->execute();
+
+    $rows = $query->rowCount();
+
+    if ($rows > 0) {
+        $query = $conn->prepare("DELETE FROM users WHERE id = :id");
+        $query->bindParam(":id", $id);
+        $result = $query->execute();
     }
-}
+
+    return $result;
+    }
