@@ -112,4 +112,19 @@ function updateGame($id, $data) {
 
 function deleteGame($id) {
     // functie om een specifieke game te verwijderen uit de database
+    $conn = openDatabaseConnection();
+
+    $query = $conn->prepare("SELECT * FROM games WHERE id = :id");
+    $query->bindParam(":id", $id);
+    $query->execute();
+
+    $rows = $query->rowCount();
+
+    if ($rows > 0) {
+        $query = $conn->prepare("DELETE FROM games WHERE id = :id");
+        $query->bindParam(":id", $id);
+        $result = $query->execute();
+    }
+
+    return $result;
 }

@@ -95,11 +95,15 @@ function update($id) {
 // functie delete($id) laat de juiste pagina zien met het correcte id
 function delete($id) {
     // variabele om een specifieke game op te halen uit de database
+    $game = getGame($id);
     // juiste pagina weergeven voor de view
+    render("games/delete", array("game" => $game));
 }
 
 // functie destroy($id) verwijderd de gegevens uit de database
 function destroy($id) {
     // gegevens uit de database verwijderen
+    deleteGame($id);
     // doorverwijzen naar de juiste pagina
+    header("Location: " . URL . "games/index");
 }
