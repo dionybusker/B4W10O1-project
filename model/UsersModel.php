@@ -40,7 +40,7 @@ function updateUser($id, $data) {
     $conn = openDataBaseConnection();
            $insert = $conn->prepare("UPDATE users SET full_name = :fullname, age = :age, email = :email, phone = :phone where id =:id");
            $insert->bindParam(':id', $id);
-           $insert->bindParam(':full_name', $data['full_name']);
+           $insert->bindParam(':fullname', $data['full_name']);
            $insert->bindParam(':age', $data['age']);
 		   $insert->bindParam(':email', $data['email']);
 		   $insert->bindParam(':phone', $data['phone']);
