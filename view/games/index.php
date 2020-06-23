@@ -6,10 +6,7 @@
         <tr>
             <th></th>
             <th>Game</th>
-            <th>Developer</th>
-            <th>Publisher</th>
-            <th>Genre</th>
-            <th>Platform</th>
+        
             <th>Plekken</th>
             <th></th> <!-- detail page -->
             <th></th> <!-- edit page -->
@@ -23,10 +20,8 @@
                     </a>
                 </td>
                 <td><?php echo $result["game_name"] ?></td>
-                <td><?php echo $result["developer"] ?></td>
-                <td><?php echo $result["publisher"] ?></td>
-                <td><?php echo $result["genre"] ?></td>
-                <td><?php echo $result["platform"] ?></td>
+               
+           
                 <td><?php echo $result["total_spots"] ?></td>
                 <td>
                     <a class="p-1 btn btn-custom-blue" href="<?php echo URL ?>games/detail/<?= $result['id'] ?>">
@@ -34,14 +29,7 @@
                     </a>
                 </td>
                 <td>
-                    <a class="p-1 btn btn-secondary" href="<?=URL?>games/edit/<?= $result['id'] ?>">
-                        <i class="fas fa-edit"></i>
-                    </a>
-                </td>
-                <td>
-                    <a class="p-1 btn btn-custom-red" href="<?=URL?>games/delete/<?= $result['id'] ?>">
-                        <i class="fas fa-trash-alt"></i>
-                    </a>
+                
                 </td>
             </tr>
         <?php } ?>
