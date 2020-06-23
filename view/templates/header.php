@@ -9,19 +9,20 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> 	
-		<link rel="stylesheet" href="<?php echo URL ?>/css/style.css">
+        <link rel="stylesheet" href="<?php echo URL ?>css/style.css">
+        <script type="text/javascript" src="<?php echo URL ?>js/script.js"></script>
 	</head>
 	<body class="bg-custom-img">
         <div class="row col-12 m-0 p-0">
             <div class="col-12 bg-custom py-2 text-right">
-                <a class="mx-2 text-white" href="https://github.com/dionybusker/B4W10O1-project" target="_blank" title="Our Github repository">
+                <a class="mx-2 text-white text-decoration-none" href="https://github.com/dionybusker/B4W10O1-project" target="_blank" title="See our Github repository!">
                     <i class="fab fa-github"></i>
                 </a>
-                <a class="mx-2 text-white" href="https://trello.com/b/BXjwJVmJ" target="_blank" title="Our Trello board">
+                <a class="mx-2 text-white text-decoration-none" href="https://trello.com/b/BXjwJVmJ" target="_blank" title="See our Trello board!">
                     <i class="fab fa-trello"></i>
                 </a>
             </div>
-            
+
             <nav class="col-lg-2 bg-custom">
                 <div class="col-lg-12 p-0">
                     <a class="navbar-brand col-lg-12 col-sm-6 m-0 p-0" href="<?php echo URL ?>home/index">
@@ -44,9 +45,9 @@
 
             </nav>
 
-                <div id="page-container" class="col-10 m-0 p-0">
+            <div id="page-container" class="col-10 m-0 p-0">
 
 
-                    <div class="row col-12 m-0 p-0">
-                        <!-- rest van de pages -->
-                        <div class="col-9 bg-white mx-auto my-2 border-dark shadow">
+                <div class="row col-12 m-0 p-0">
+                    <!-- rest van de pages -->
+                    <div class="col-9 bg-white mx-auto my-2 border-dark shadow">
