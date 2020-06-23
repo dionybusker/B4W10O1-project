@@ -1,1 +1,2 @@
-<p>lol</p>
+<h1>About us</h1>
+<p>home/about</p>

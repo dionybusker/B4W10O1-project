@@ -1,9 +1,7 @@
-<div class="container">
-    <h1>Welkom op bij de users</h1>
-    <p>Je bent nu in users/index</p>
-</div>
+<h1>Welkom op bij de users</h1>
+<p>Je bent nu in users/index</p>
 
-<a class="my-2 btn btn-secondary rounded-0" href="<?= URL ?>users/create">Create</a>
+<a class="my-2 btn btn-custom-blue rounded-0" href="<?= URL ?>users/create">Create</a>
 
 <table class="table">
     <tr>
@@ -22,7 +20,7 @@
             <td><?php echo $result["email"] ?></td>
             <td><?php echo $result["phone"] ?></td>
             <td>
-                <a class="p-1 btn btn-info" href="#">
+                <a class="p-1 btn btn-custom-blue" href="#">
                     <i class="fas fa-user-alt"></i>
                 </a>
             </td>
@@ -32,7 +30,7 @@
                 </a>
             </td>
             <td>
-                <a class='p-1 btn btn-danger' href='<?= URL ?>users/delete/<?= $result['id'] ?>'>
+                <a class='p-1 btn btn-custom-red' href='<?= URL ?>users/delete/<?= $result['id'] ?>'>
                     <i class='fas fa-trash-alt'></i>
                 </a>
             </td>

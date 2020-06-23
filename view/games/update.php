@@ -6,7 +6,7 @@
 
     <label class="col-4">Image</label>
     <input class="col-4" type="text" name="img" value="<?php echo $game["img"] ?>">
-   
+
     <label class="col-4">Developer</label>
     <input class="col-4" type="text" name="developer" value="<?php echo $game["developer"] ?>">
 
@@ -33,6 +33,6 @@
     <label class="col-4">Description</label>
     <textarea class="col-4" type="text" name="description"><?php echo $game["description"] ?></textarea>
 
-    <input class="col-4 my-2 btn btn-secondary rounded-0" type="submit" name="update" value="update">
+    <input class="col-4 my-2 btn btn-custom-blue rounded-0" type="submit" name="update" value="update">
 </form>
 
