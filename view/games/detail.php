@@ -16,7 +16,6 @@
         <th></th> <!-- edit page -->
         <th></th> <!-- delete page -->
     </tr>
-    
         <tr>
 			<td>
 				<a href="#">
@@ -43,7 +42,6 @@
                 </a>
             </td>
         </tr>
-    
 </table>
 
 	</div>
