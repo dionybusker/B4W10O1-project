@@ -13,7 +13,11 @@ function index() {
 function create() {
     // juiste pagina weergeven in de view
     $genres = getAllGenres();
-	render("games/create", array('genres' => $genres));
+    $platforms = getAllPlatforms();
+	render("games/create", array(
+        'genres' => $genres,
+        'platforms' => $platforms
+    ));
 }
 
 // functie store() slaat de gegevens van het formulier op

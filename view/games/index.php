@@ -1,6 +1,7 @@
 <div>
+<button><a href="<?=URL?>games/create">voeg een game toe</a></button>
 
-		<div class="col-12 row">
+<div class="col-12 row">
 
 
 
@@ -12,6 +13,7 @@
         <th>Developer</th>
         <th>Publisher</th>
         <th>Genre</th>
+        <th>Platform</th>
         <th>Plekken</th>
         <th></th>
         <th></th>
@@ -27,6 +29,7 @@
             <td><?php echo $result["developer"] ?></td>
             <td><?php echo $result["publisher"] ?></td>
             <td><?php echo $result["genre"] ?></td>
+            <td><?php echo $result["platform"] ?></td>
             <td><?php echo $result["total_spots"] ?></td>
             <td>
                 <a class="p-1 btn btn-secondary" href="#">
@@ -44,6 +47,5 @@
 
 	</div>
     
-	<button><a href="<?=URL?>games/create">voeg een game toe</a></button>
 
 </div>
