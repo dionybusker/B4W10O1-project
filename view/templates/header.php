@@ -16,9 +16,9 @@
 			<nav class="col-12 navbar navbar-expand bg-danger m-0 p-0">
 				<ul class="col-12 navbar-nav m-0 p-0">
 					<li class="col-3 nav-item m-0 p-0 btn btn-danger rounded-0"><a class="nav-link text-white" href="<?php echo URL ?>home/index"><i class="fas fa-home"></i></a></li>
+					<li class="col-3 nav-item m-0 p-0 btn btn-danger rounded-0"><a class="nav-link text-white" href="<?php echo URL ?>home/about"><i class="fas fa-address-card"></i></a></li>
 					<li class="col-3 nav-item m-0 p-0 btn btn-danger rounded-0"><a class="nav-link text-white" href="<?php echo URL ?>games/index"><i class="fas fa-gamepad"></i></a></li>
 					<li class="col-3 nav-item m-0 p-0 btn btn-danger rounded-0"><a class="nav-link text-white" href="<?php echo URL ?>users/index"><i class="fas fa-user-alt"></i></a></li>
-					<li class="col-3 nav-item m-0 p-0 btn btn-danger rounded-0"><a class="nav-link text-white" href="#"><i class="fas fa-address-card"></i></a></li>
 				</ul>
 			</nav>
 

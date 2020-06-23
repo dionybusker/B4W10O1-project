@@ -28,18 +28,18 @@ function store() {
     // gegevens van het formulier opslaan
     // doorverwijzen naar de juiste pagina
 
-    $fields = ["game", "img", "developer", "publisher", "genre", "platform", "totalspots", "description"];
+    $fields = ["game_name", "img", "developer", "publisher", "genre", "platform", "total_spots", "description"];
 
     $class = [];
     $data = [];
 
-    $class["game"] = $data["game"] = "";
+    $class["game_name"] = $data["game_name"] = "";
     $class["img"] = $data["img"] = "";
     $class["developer"] = $data["developer"] = "";
     $class["publisher"] = $data["publisher"] = "";
     $class["genre"] = $data["genre"] = "";
     $class["platform"] = $data["platform"] = "";
-    $class["totalspots"] = $data["totalspots"] = "";
+    $class["total_spots"] = $data["total_spots"] = "";
     $class["description"] = $data["description"] = "";
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
