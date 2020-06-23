@@ -5,6 +5,10 @@
 <form method="post" action="store">
     <!-- bouw hier je formulier -->
 
+
+
+
+
     <label class="col-4">Game title</label>
     <input class="col-4" type="text" name="game_name">
 

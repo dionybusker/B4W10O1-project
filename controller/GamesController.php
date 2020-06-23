@@ -67,12 +67,22 @@ function store() {
 function edit($id) {
     // variabele om een specifieke game op te halen uit de database
     // juiste pagina weergeven in de view
+    $games = getAllGames($id);
+    render("games/update", array(
+        'genres' => $genres,
+        'platforms' => $platforms
+    ));
+
 }
+
 
 // functie update($id) doet de al bestaande gegevens uit de database updaten
 function update($id) {
     // gegevens van het formulier updaten in de database
     // doorverwijzen naar de juiste pagina
+    $updateGame = updateGame($_POST);
+	
+    header('location: ' . URL . 'games/index');
 }
 
 // functie delete($id) laat de juiste pagina zien met het correcte id
