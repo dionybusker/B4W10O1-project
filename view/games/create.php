@@ -36,14 +36,17 @@
 </div>
 
 <div class="form-group">
-<label for="">aantal plekken</label>
-<input type="text" name="total_spots" class="form-control" required>
+<label for="">platform</label>
+<select name="platform" id="platform">
+<?php foreach ($platforms as $platform) { ?>
+  <option value="<?php echo $platform["platform_id"] ?>"><?php echo $platform["platform"] ?></option>
+<?php } ?>
+</select>
 </div>
 
-
 <div class="form-group">
-<label for="">platform</label>
-<input type="text" name="platform" class="form-control" required>
+<label for="">aantal plekken</label>
+<input type="text" name="total_spots" class="form-control" required>
 </div>
 
 <div class="form-group">
