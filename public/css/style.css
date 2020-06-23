@@ -1,0 +1,36 @@
+/* CUSTOMS */
+.bg-custom-img {
+    background-image: url("../img/gradient-bg.jpg");
+    background-position: center;
+    background-repeat: repeat-y;
+    background-size: cover;
+}
+
+#sidebar { min-width: 130px; }
+/* .nav-link[data-toggle].collapsed:after { content: "▾"; float: right; }
+.nav-link[data-toggle]:not(.collapsed):after { content: "▴"; float: right; } */
+
+.width-250 { width: 250px; }
+
+.bg-custom { background-color: #15222B; }
+.btn-custom-red { background-color: #891111; color: white; }
+.btn-custom-red:hover { background-color: #780D0D; color: white; }
+.btn-custom-blue { background-color: #15222B; color: white; }
+.btn-custom-blue:hover { background-color: #2B4252; color: white; }
+
+#page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+/* #content-wrap {
+    margin-bottom: 2.5rem;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2.5rem;
+} */
