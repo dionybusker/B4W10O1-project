@@ -6,15 +6,12 @@ define('DB_HOST', '127.0.0.1'); // Wat is het IP adres van de server (127.0.0.1 
 define('DB_NAME', 'b4w10o1-project'); // Wat is de database naam
 
 
-		// Wat is de database gebruiker
-			// Wat is het database wachtwoord
+	// Wat is de database gebruiker
+	// Wat is het database wachtwoord
 //DIONY
-
-
 // define('DB_USER', 'root'); 		
 // define('DB_PASS', '');	
 //MERIJN KIMBERLY
-
 // define('DB_USER', 'root'); 		
 // define('DB_PASS', '');	
 //MERIJN
