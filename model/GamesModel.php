@@ -34,6 +34,18 @@ function getAllGames() {
 }
 
 function getGame($id) {
+    $conn = openDatabaseConnection();
+
+    $query = $conn->prepare("SELECT games.*, genres.*, platforms.*
+                             FROM games 
+                             JOIN genres ON genres.genre_id = games.genre_id
+                             JOIN platforms ON platforms.platform_id = games.platform_id 
+                            WHERE id = :id");
+         $query->bindParam(':id', $id);
+    $query->execute();
+    
+    
+    return $query->fetch();
     // functie om een specifieke game op te halen uit de database
 }
 

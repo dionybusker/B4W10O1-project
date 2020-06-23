@@ -33,7 +33,7 @@
             <td><?php echo $result["platform"] ?></td>
             <td><?php echo $result["total_spots"] ?></td>
             <td>
-                <a class="p-1 btn btn-info" href="#">
+                <a class="p-1 btn btn-info" href="<?php echo URL ?>games/detail/<?= $result['id'] ?>">
                     <i class="fas fa-gamepad"></i>
                 </a>
             </td>
