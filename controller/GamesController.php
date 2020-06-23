@@ -71,12 +71,13 @@ function edit($id) {
     // variabele om een specifieke game op te halen uit de database
     // juiste pagina weergeven in de view
     $genres = getAllGenres();
-    $games = getAllGames($id);
+    $game = getGame($id);
     $platforms = getAllPlatforms();
 
     render("games/update", array(
         'genres' => $genres,
-        'platforms' => $platforms
+        'platforms' => $platforms,
+        'game' => $game
     ));
 
 }
@@ -86,9 +87,9 @@ function edit($id) {
 function update($id) {
     // gegevens van het formulier updaten in de database
     // doorverwijzen naar de juiste pagina
-    $updateGame = updateGame($_POST);
+    updateGame($id, $_POST);
 	
-    header('location: ' . URL . 'games/index');
+    header('Location: ' . URL . 'games/index');
 }
 
 // functie delete($id) laat de juiste pagina zien met het correcte id

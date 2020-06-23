@@ -40,8 +40,8 @@ function getGame($id) {
                              FROM games 
                              JOIN genres ON genres.genre_id = games.genre_id
                              JOIN platforms ON platforms.platform_id = games.platform_id 
-                            WHERE id = :id");
-         $query->bindParam(':id', $id);
+                             WHERE id = :id");
+    $query->bindParam(':id', $id);
     $query->execute();
     
     
@@ -87,7 +87,17 @@ function createGame($data) {
 function updateGame($id, $data) {
     // functie om een bestaande game uit de database te bewerken\
     $conn = openDatabaseConnection();
-    $insert = $conn->prepare("UPDATE INTO games (game_name, developer, img, publisher, genre_id, platform_id, total_spots, description) VALUES (:game_name, :developer, :img, :publisher, :genre, :platform, :total_spots, :description)");
+    $insert = $conn->prepare("UPDATE games
+                              SET game_name = :game_name,
+                                  img = :img,
+                                  developer = :developer,
+                                  publisher = :publisher,
+                                  genre_id = :genre,
+                                  platform_id = :platform,
+                                  total_spots = :total_spots,
+                                  description = :description
+                              WHERE id = :id");
+    $insert->bindParam(":id", $id);
     $insert->bindParam(':game_name', $data["game_name"]);
     $insert->bindParam(':img', $data["img"]);
     $insert->bindParam(':developer', $data["developer"]);
