@@ -38,12 +38,12 @@
 
             </td>
             <td>
-                <a class="p-1 btn btn-secondary" href="<?=URL?>games/edit/<?= $game['id'] ?>">
+                <a class="p-1 btn btn-secondary" href="<?=URL?>games/edit/<?= $game['game_id'] ?>">
                     <i class="fas fa-edit"></i>
                 </a>
             </td>
             <td>
-                <a class="p-1 btn btn-danger" href="<?=URL?>games/delete/<?= $game['id'] ?>">
+                <a class="p-1 btn btn-danger" href="<?=URL?>games/delete/<?= $game['game_id'] ?>">
                     <i class="fas fa-trash-alt"></i>
                 </a>
             </td>

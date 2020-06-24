@@ -22,12 +22,12 @@
                 </a>
             </td>
             <td>
-                <a class="p-1 btn btn-secondary" href='<?= URL ?>users/edit/<?= $result['id'] ?>'>
+                <a class="p-1 btn btn-secondary" href='<?= URL ?>users/edit/<?= $result['user_id'] ?>'>
                     <i class='fas fa-edit'></i>
                 </a>
             </td>
             <td>
-                <a class='p-1 btn btn-custom-red' href='<?= URL ?>users/delete/<?= $result['id'] ?>'>
+                <a class='p-1 btn btn-custom-red' href='<?= URL ?>users/delete/<?= $result['user_id'] ?>'>
                     <i class='fas fa-trash-alt'></i>
                 </a>
             </td>
