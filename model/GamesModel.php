@@ -103,6 +103,7 @@ function updateGame($id, $data) {
     $insert->bindParam(':img', $data["img"]);
     $insert->bindParam(':developer', $data["developer"]);
     $insert->bindParam(':publisher', $data["publisher"]);
+    $insert->bindParam(':releasedate', $data["releasedate"]);
     $insert->bindParam(':genre', $data["genre"]);
     $insert->bindParam(':platform', $data["platform"]);
     $insert->bindParam(':total_spots', $data["total_spots"]);
