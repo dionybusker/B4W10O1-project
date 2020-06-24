@@ -8,10 +8,12 @@ function index() {
     // juiste pagina weergeven in de view
     render("games/index", array('games' => $games));
 }
+
 function detail($id){
-$game = getGame($id);
-render("games/detail", array('game' => $game));
+    $game = getGame($id);
+    render("games/detail", array('game' => $game));
 }
+
 // functie create() laat de juiste pagina zien in de view
 function create() {
     // juiste pagina weergeven in de view
@@ -28,43 +30,43 @@ function store() {
     // gegevens van het formulier opslaan
     // doorverwijzen naar de juiste pagina
 
-    $fields = ["game_name", "img", "developer", "publisher", "genre", "platform", "total_spots", "description", "releasedate"];
+    ## het kan korter, maar dat moeten we nog uitzoeken! ##
+    $genres = getAllGenres();
+    $platforms = getAllPlatforms();
 
-    $class = [];
-    $data = [];
+    $gamename = validateData(sanitizeData($_POST["game_name"]));
+    $img = validateData(sanitizeData($_POST["img"]));
+    $developer = validateData(sanitizeData($_POST["developer"]));
+    $publisher = validateData(sanitizeData($_POST["publisher"]));
+    $totalspots = validateData(sanitizeData($_POST["total_spots"]));
+    $description = sanitizeData($_POST["description"]);
+    $releasedate = validateData(sanitizeData($_POST["releasedate"]));
+    $genre = $_POST["genre"];
+    $platform = $_POST["platform"];
 
-    $class["game_name"] = $data["game_name"] = "";
-    $class["img"] = $data["img"] = "";
-    $class["developer"] = $data["developer"] = "";
-    $class["publisher"] = $data["publisher"] = "";
-    $class["releasedate"] = $data["releasedate"] = "";
-    $class["genre"] = $data["genre"] = "";
-    $class["platform"] = $data["platform"] = "";
-    $class["total_spots"] = $data["total_spots"] = "";
-    $class["description"] = $data["description"] = "";
+    $error = "";
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $valid = true;
-
-        foreach ($fields as $field) {
-            if (isset($_POST[$field]) && empty($_POST[$field])) {
-                $class[$field] = "is-invalid";
-                $valid = false;
-                header("Location: " . URL . "games/create");
-            } else {
-                $data[$field] = $_POST[$field];
-            }
-        }
-
-        if ($valid == true) {
+        if (empty($gamename) || empty($img) || empty($developer) || empty($publisher) || empty($totalspots) || empty($description) || empty($releasedate) || empty($genre) || empty($platform)) {
+            $error = "Please fill in the form.";
+            $valid = false;
+            render("games/create", array(
+                "genres" => $genres,
+                "platforms" => $platforms,
+                "error" => $error,
+                "gamename" => $gamename,
+                "img" => $img,
+                "developer" => $developer,
+                "publisher" => $publisher,
+                "totalspots" => $totalspots,
+                "description" => $description,
+                "releasedate" => $releasedate
+            ));
+        } else {
             createGame($_POST);
             header("Location: " . URL . "games/index");
         }
     }
-    
-
-    // createGame($_POST);
-    // header("Location: ". URL . "games/index");
 }
 
 // functie edit($id) laat de juiste pagina zien met het correcte id

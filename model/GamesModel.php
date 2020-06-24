@@ -35,6 +35,7 @@ function getAllGames() {
 }
 
 function getGame($id) {
+    // functie om een specifieke game op te halen uit de database
     $conn = openDatabaseConnection();
 
     $query = $conn->prepare("SELECT games.*, genres.*, platforms.*
@@ -47,14 +48,12 @@ function getGame($id) {
     
     
     return $query->fetch();
-    // functie om een specifieke game op te halen uit de database
 }
 
 function createGame($data) {
-    // if($data['game_name']!=NULL){
-        // try {
-
+    // functie om een game aan te maken en opslaan in de database
     $conn = openDatabaseConnection();
+
     $insert = $conn->prepare("INSERT INTO games (game_name, developer, img, publisher, releasedate, genre_id, platform_id, total_spots, description) 
                               VALUES (:game_name, :developer, :img, :publisher, :releasedate, :genre, :platform, :total_spots, :description)");
     $insert->bindParam(':game_name', $data["game_name"]);
@@ -67,23 +66,7 @@ function createGame($data) {
     $insert->bindParam(':total_spots', $data["total_spots"]);
     $insert->bindParam(':description', $data["description"]);
     $insert->execute();
-
-
-
-// }
-// catch(PDOException $e) {
-// echo "Connection failed: " . $e->getMessage();
-// }
-// $conn = null;
-
-// return $result;
-// }
 }
-
-
-
-
-    // functie om een game aan te maken en opslaan in de database
 
 
 function updateGame($id, $data) {
@@ -131,4 +114,18 @@ function deleteGame($id) {
     }
 
     return $result;
+}
+
+function sanitizeData($data) {
+    $data = strip_tags($data);
+    $data = htmlspecialchars($data);
+    $data = stripslashes($data);
+
+    return $data;
+}
+
+function validateData($data) {
+    if (preg_match("/^[a-zA-Z0-9 .]*$/", $data)) {
+        return $data;
+    }
 }
