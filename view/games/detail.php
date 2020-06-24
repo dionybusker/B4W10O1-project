@@ -10,11 +10,11 @@
         <th>description</th>
         <th>Developer</th>
         <th>Publisher</th>
-      
+        <th>Release</th>
         <th>Genre</th>
         <th>Platform</th>
         <th>Plekken</th>
-        <th>Release</th>
+        
         <th></th> <!-- detail page -->
         <th></th> <!-- edit page -->
         <th></th> <!-- delete page -->
