@@ -36,9 +36,10 @@
                     <div id="sidebar" class="justify-content-center my-0 pt-3 px-0 collapse d-lg-flex">
                         <ul class="nav nav-pills flex-column">
                             <li class="nav-item m-0 p-0 shadow-lg width-250 btn btn-custom-red rounded-0"><a class="nav-link text-white" href="<?php echo URL ?>home/index"><i class="fas fa-home"></i> Home</a></li>
-                            <li class="nav-item m-0 p-0 shadow-lg width-250 btn btn-custom-red rounded-0"><a class="nav-link text-white" href="<?php echo URL ?>home/about"><i class="fas fa-address-card"></i> About us</a></li>
                             <li class="nav-item m-0 p-0 shadow-lg width-250 btn btn-custom-red rounded-0"><a class="nav-link text-white" href="<?php echo URL ?>games/index"><i class="fas fa-gamepad"></i> Games</a></li>
-                            <li class="nav-item m-0 p-0 shadow-lg width-250 btn btn-custom-red rounded-0"><a class="nav-link text-white" href="<?php echo URL ?>users/index"><i class="fas fa-user-alt"></i> Users</a></li>
+                            <li class="nav-item m-0 p-0 shadow-lg width-250 btn btn-custom-red rounded-0"><a class="nav-link text-white" href="<?php echo URL ?>users/index"><i class="fas fa-headset"></i> Users</a></li>
+                            <li class="nav-item m-0 p-0 shadow-lg width-250 btn btn-custom-red rounded-0"><a class="nav-link text-white" href="<?php echo URL ?>tournaments/index"><i class="fas fa-trophy"></i> Tournament</a></li>
+                            <li class="nav-item m-0 p-0 shadow-lg width-250 btn btn-custom-red rounded-0"><a class="nav-link text-white" href="#"><i class="fas fa-user-alt"></i> Register</a></li>
                         </ul>
                     </div>
                 </div>

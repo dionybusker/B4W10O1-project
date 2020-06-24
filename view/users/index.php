@@ -9,9 +9,6 @@
         <th>Age</th>
         <th>Email</th>
         <th>Phone</th>
-        <th></th> <!-- detail page -->
-        <th></th> <!-- edit page -->
-        <th></th> <!-- delete page -->
     </tr>
     <?php foreach ($users as $result) { ?>
         <tr>
