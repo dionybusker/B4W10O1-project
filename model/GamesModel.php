@@ -93,6 +93,7 @@ function updateGame($id, $data) {
                                   img = :img,
                                   developer = :developer,
                                   publisher = :publisher,
+                                  releasedate = :releasedate,
                                   genre_id = :genre,
                                   platform_id = :platform,
                                   total_spots = :total_spots,
