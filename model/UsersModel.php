@@ -26,26 +26,26 @@ function getUser($id) {
 function createUser($data) {
     // functie om een user aan te maken en opslaan in de database
     $conn = openDataBaseConnection();
-           $insert = $conn->prepare("INSERT INTO users (full_name, age, email, phone) VALUES (:full_name, :age, :email, :phone)");
-           $insert->bindParam(':full_name', $data['full_name']);
-           $insert->bindParam(':age', $data['age']);
-		   $insert->bindParam(':email', $data['email']);
-		   $insert->bindParam(':phone', $data['phone']);
-           $insert->execute();
-           $conn = null;  
+    $insert = $conn->prepare("INSERT INTO users (full_name, age, email, phone) VALUES (:full_name, :age, :email, :phone)");
+    $insert->bindParam(':full_name', $data['full_name']);
+    $insert->bindParam(':age', $data['age']);
+    $insert->bindParam(':email', $data['email']);
+    $insert->bindParam(':phone', $data['phone']);
+    $insert->execute();
+    $conn = null;  
 }
 
 function updateUser($id, $data) {
     // functie om een bestaande user uit de database te bewerken
     $conn = openDataBaseConnection();
-           $insert = $conn->prepare("UPDATE users SET full_name = :fullname, age = :age, email = :email, phone = :phone where user_id =:id");
-           $insert->bindParam(':id', $id);
-           $insert->bindParam(':fullname', $data['full_name']);
-           $insert->bindParam(':age', $data['age']);
-		   $insert->bindParam(':email', $data['email']);
-		   $insert->bindParam(':phone', $data['phone']);
-           $insert->execute();
-           $conn = null; 
+    $insert = $conn->prepare("UPDATE users SET full_name = :fullname, age = :age, email = :email, phone = :phone where user_id =:id");
+    $insert->bindParam(':id', $id);
+    $insert->bindParam(':fullname', $data['full_name']);
+    $insert->bindParam(':age', $data['age']);
+    $insert->bindParam(':email', $data['email']);
+    $insert->bindParam(':phone', $data['phone']);
+    $insert->execute();
+    $conn = null;
 }
 
 function deleteUser($id) {
