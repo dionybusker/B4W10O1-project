@@ -27,7 +27,8 @@ function getAllGames() {
     $query = $conn->prepare("SELECT games.*, genres.*, platforms.*
                              FROM games
                              JOIN genres ON genres.genre_id = games.genre_id
-                             JOIN platforms ON platforms.platform_id = games.platform_id");
+                             JOIN platforms ON platforms.platform_id = games.platform_id
+                             ORDER BY game_id");
     $query->execute();
     
     return $query->fetchAll();
