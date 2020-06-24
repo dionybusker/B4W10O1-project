@@ -7,13 +7,13 @@
     <tr>
 		<th></th>
         <th>Game</th>
-        <th>description</th>
+        <th>Description</th>
         <th>Developer</th>
         <th>Publisher</th>
         <th>Release</th>
         <th>Genre</th>
         <th>Platform</th>
-        <th>Plekken</th>
+        <th>Spots</th>
         
         <th></th> <!-- detail page -->
         <th></th> <!-- edit page -->

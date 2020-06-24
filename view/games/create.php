@@ -1,4 +1,4 @@
-<h1>voeg een game toe</h1>
+<h1>Create a new game</h1>
 
 <form name="create" method="post" action="store">
     <!-- bouw hier je formulier -->
@@ -38,7 +38,7 @@
     <label class="col-4">Description</label>
     <textarea class="col-4" type="text" name="description"><?php echo !empty($error) ? htmlspecialchars($description) : "" ?></textarea>
 
-    <input class="col-4 my-2 btn btn-custom-blue rounded-0" type="submit" name="create">
+    <input class="col-4 my-2 btn btn-custom-blue rounded-0" type="submit" name="create" value="Create game!">
     <?php if (empty($error)) {
         echo "";
     } else { ?>
