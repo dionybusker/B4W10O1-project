@@ -49,7 +49,6 @@ function store() {
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (empty($gamename) || empty($img) || empty($developer) || empty($publisher) || empty($totalspots) || empty($description) || empty($releasedate) || empty($genre) || empty($platform)) {
             $error = "Please fill in the form.";
-            $valid = false;
             render("games/create", array(
                 "genres" => $genres,
                 "platforms" => $platforms,

@@ -19,8 +19,6 @@ function create() {
 function store() {
     // gegevens van het formulier opslaan
     // doorverwijzen naar de juiste pagina
-    // createUser($_POST);
-    // header('location: ' . URL . 'users/index');
 
     ## het kan korter, maar dat moeten we nog uitzoeken! ##
     $fullname = validateData(sanitizeData($_POST["full_name"]));
