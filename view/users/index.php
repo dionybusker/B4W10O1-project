@@ -17,7 +17,7 @@
             <td><?php echo $result["email"] ?></td>
             <td><?php echo $result["phone"] ?></td>
             <td>
-                <a class="p-1 btn btn-custom-blue" href="#">
+                <a class="p-1 btn btn-custom-blue" href='<?= URL ?>users/detail/<?= $result['user_id'] ?>'>
                     <i class="fas fa-user-alt"></i>
                 </a>
             </td>
