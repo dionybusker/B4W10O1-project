@@ -1,5 +1,5 @@
 <h1>Persoon wijzigen</h1>
-<form name="update" method="post" action="<?=URL?>users/update/<?php echo $users['id'] ?>">
+<form name="update" method="post" action="<?=URL?>users/update/<?php echo $users['user_id'] ?>">
     <!--  Bouw hier de rest van je formulier   -->
     <label class="col-4" for='full_name'>Uw naam : </label>
     <input class="col-4" type='text' id='full_name' name='full_name' value='<?= $users['full_name'] ?>'>

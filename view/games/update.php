@@ -1,5 +1,5 @@
 <h1>Persoon wijzigen</h1>
-<form name="update" method="post" action="<?php echo URL ?>games/update/<?php echo $game["id"] ?>">
+<form name="update" method="post" action="<?php echo URL ?>games/update/<?php echo $game["game_id"] ?>">
     <!-- bouw hier je formulier -->
     <label class="col-4">Game title</label>
     <input class="col-4" type="text" name="game_name" value="<?php echo $game["game_name"] ?>">
