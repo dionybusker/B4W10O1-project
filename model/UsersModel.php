@@ -64,4 +64,24 @@ function deleteUser($id) {
     }
 
     return $result;
+}
+
+function sanitizeData($data) {
+    $data = strip_tags($data);
+    $data = htmlspecialchars($data);
+    $data = stripslashes($data);
+
+    return $data;
+}
+
+function validateData($data) {
+    if (preg_match("/^[a-zA-Z0-9 .]*$/", $data)) {
+        return $data;
     }
+}
+
+function validateMail($data) {
+    if (filter_var($data, FILTER_VALIDATE_EMAIL)) {
+        return $data;
+    }
+}
