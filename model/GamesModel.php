@@ -54,12 +54,13 @@ function createGame($data) {
         // try {
 
     $conn = openDatabaseConnection();
-    $insert = $conn->prepare("INSERT INTO games (game_name, developer, img, publisher, genre_id, platform_id, total_spots, description) 
-                              VALUES (:game_name, :developer, :img, :publisher, :genre, :platform, :total_spots, :description)");
+    $insert = $conn->prepare("INSERT INTO games (game_name, developer, img, publisher, releasedate, genre_id, platform_id, total_spots, description) 
+                              VALUES (:game_name, :developer, :img, :publisher, :releasedate, :genre, :platform, :total_spots, :description)");
     $insert->bindParam(':game_name', $data["game_name"]);
     $insert->bindParam(':img', $data["img"]);
     $insert->bindParam(':developer', $data["developer"]);
     $insert->bindParam(':publisher', $data["publisher"]);
+    $insert->bindParam(':releasedate', $data["releasedate"]);
     $insert->bindParam(':genre', $data["genre"]);
     $insert->bindParam(':platform', $data["platform"]);
     $insert->bindParam(':total_spots', $data["total_spots"]);

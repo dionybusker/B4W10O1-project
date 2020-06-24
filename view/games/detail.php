@@ -30,6 +30,7 @@
             <td><?php echo $game["description"] ?></td>
             <td><?php echo $game["developer"] ?></td>
             <td><?php echo $game["publisher"] ?></td>
+            <td><?php echo $game["releasedate"] ?></td>
             <td><?php echo $game["genre"] ?></td>
             <td><?php echo $game["platform"] ?></td>
             <td><?php echo $game["total_spots"] ?></td>

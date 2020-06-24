@@ -13,6 +13,9 @@
     <label class="col-4">Publisher</label>
     <input class="col-4" type="text" name="publisher" value="<?php echo $game["publisher"] ?>">
 
+    <label class="col-4">Release</label>
+    <input class="col-4" type="text" name="releasedate" value="<?php echo $game["releasedate"] ?>">
+
     <label class="col-4" for="genre">Genre</label>
     <select class="col-4" name="genre" id="genre">
         <?php foreach ($genres as $genre) { ?>

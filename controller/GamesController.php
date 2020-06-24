@@ -28,7 +28,7 @@ function store() {
     // gegevens van het formulier opslaan
     // doorverwijzen naar de juiste pagina
 
-    $fields = ["game_name", "img", "developer", "publisher", "genre", "platform", "total_spots", "description"];
+    $fields = ["game_name", "img", "developer", "publisher", "genre", "platform", "total_spots", "description", "releasedate"];
 
     $class = [];
     $data = [];
@@ -37,6 +37,7 @@ function store() {
     $class["img"] = $data["img"] = "";
     $class["developer"] = $data["developer"] = "";
     $class["publisher"] = $data["publisher"] = "";
+    $class["releasedate"] = $data["releasedate"] = "";
     $class["genre"] = $data["genre"] = "";
     $class["platform"] = $data["platform"] = "";
     $class["total_spots"] = $data["total_spots"] = "";
