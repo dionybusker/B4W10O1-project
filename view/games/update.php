@@ -1,4 +1,4 @@
-<h1>Persoon wijzigen</h1>
+<h1>Update a game's info</h1>
 <form name="update" method="post" action="<?php echo URL ?>games/update/<?php echo $game["game_id"] ?>">
     <!-- bouw hier je formulier -->
     <label class="col-4">Game title</label>
@@ -36,6 +36,6 @@
     <label class="col-4">Description</label>
     <textarea class="col-4" type="text" name="description"><?php echo $game["description"] ?></textarea>
 
-    <input class="col-4 my-2 btn btn-custom-blue rounded-0" type="submit" name="update" value="update">
+    <input class="col-4 my-2 btn btn-custom-blue rounded-0" type="submit" name="update" value="Update!">
 </form>
 

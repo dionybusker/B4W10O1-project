@@ -1,4 +1,6 @@
-<a class="my-2 btn btn-custom-blue rounded-0" href="<?=URL?>games/create">voeg een game toe</a>
+<h1>All games in the database</h1>
+
+<a class="my-2 btn btn-custom-blue rounded-0" href="<?=URL?>games/create">Add a new game!</a>
 
 <div class="row col-12 justify-content-center">
 

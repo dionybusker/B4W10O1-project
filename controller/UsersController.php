@@ -19,8 +19,31 @@ function create() {
 function store() {
     // gegevens van het formulier opslaan
     // doorverwijzen naar de juiste pagina
-    createUser($_POST);
-    header('location: ' . URL . 'users/index');
+
+    ## het kan korter, maar dat moeten we nog uitzoeken! ##
+    $fullname = validateData(sanitizeData($_POST["full_name"]));
+    $email = validateMail(sanitizeData($_POST["email"]));
+    $phone = validateData(sanitizeData($_POST["phone"]));
+    $age = validateData(sanitizeData($_POST["age"]));
+
+    $error = "";
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        if (empty($fullname) || empty($email) || empty($phone) || empty($age)) {
+            $error = "Please fill in the form.";
+            $valid = false;
+            render("users/create", array(
+                "error" => $error,
+                "fullname" => $fullname,
+                "email" => $email,
+                "phone" => $phone,
+                "age" => $age
+            ));
+        } else {
+            createUser($_POST);
+            header("Location: " . URL . "users/index");
+        }
+    }
 }
 
 // functie edit($id) laat de juiste pagina zien met het correcte id

@@ -1,7 +1,6 @@
-<h1>Welkom op bij de users</h1>
-<p>Je bent nu in users/index</p>
+<h1>All users in the database</h1>
 
-<a class="my-2 btn btn-custom-blue rounded-0" href="<?= URL ?>users/create">Create</a>
+<a class="my-2 btn btn-custom-blue rounded-0" href="<?= URL ?>users/create">Add a new user!</a>
 
 <table class="table">
     <tr>
