@@ -4,7 +4,14 @@
     // require(ROOT . "model/UsersModel.php");
 
     function index() {
-        render("tournaments/index", array('tournaments'=> getAllTournaments()));
+        $games = getAllGames();
+        $users = getAllUsers();
+        $tournaments = getAllTournaments();
+        render("tournaments/index", array(
+            'games' => $games,
+            'users' => $users,
+            'tournaments' => $tournaments
+        ));
     }
 
     function create() {
