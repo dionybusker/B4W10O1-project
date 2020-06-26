@@ -64,5 +64,31 @@ function deleteTournament($id) {
     return $result;
 }
 
+function getAllGames() {
+    // functie om alle games op te halen uit de database
+    $conn = openDatabaseConnection();
+
+    $query = $conn->prepare("SELECT games.*, genres.*, platforms.*
+                             FROM games
+                             JOIN genres ON genres.genre_id = games.genre_id
+                             JOIN platforms ON platforms.platform_id = games.platform_id
+                             ORDER BY game_id");
+    $query->execute();
+    
+    return $query->fetchAll();
+}
+
+function getAllUsers() {
+    // functie om alle users op te halen uit de database
+    $db = openDatabaseConnection();
+	$sql = "SELECT * FROM users";
+	$query = $db->prepare($sql);
+	$query->execute();
+
+	$db = null;
+
+	return $query->fetchAll();
+}
+
 
 ?>

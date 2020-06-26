@@ -1,5 +1,7 @@
 <?php
     require(ROOT . "model/TournamentsModel.php");
+    // require(ROOT . "model/GamesModel.php");
+    // require(ROOT . "model/UsersModel.php");
 
     function index() {
         render("tournaments/index", array('tournaments'=> getAllTournaments()));
@@ -8,7 +10,9 @@
     function create() {
         // juiste pagina weergeven in de view
         $tournaments = getAllTournaments();
-        render('tournaments/create', array('tournaments' => $tournaments));
+        $games = getAllGames();
+        $users = getAllUsers();
+        render('tournaments/create', array('tournaments' => $tournaments,'games' => $games,'users' => $users));
     }
     
     // functie store() slaat de gegevens van het formulier op
