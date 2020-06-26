@@ -4,21 +4,7 @@
 
 	
 <table class="table">
-    <tr>
-		<th></th>
-        <th>Game</th>
-        <th>Description</th>
-        <th>Developer</th>
-        <th>Publisher</th>
-        <th>Release</th>
-        <th>Genre</th>
-        <th>Platform</th>
-        <th>Spots</th>
-        
-        <th></th> <!-- detail page -->
-        <th></th> <!-- edit page -->
-        <th></th> <!-- delete page -->
-    </tr>
+
     
         <tr>
 			<td>
@@ -26,15 +12,16 @@
 					
 				</a>
 			</td>
-            <td><?php echo $game["game_name"] ?></td>
-            <td><?php echo $game["description"] ?></td>
-            <td><?php echo $game["developer"] ?></td>
-            <td><?php echo $game["publisher"] ?></td>
-            <td><?php echo $game["releasedate"] ?></td>
-            <td><?php echo $game["genre"] ?></td>
-            <td><?php echo $game["platform"] ?></td>
-            <td><?php echo $game["total_spots"] ?></td>
             <img class="img-fluid" src="<?php echo URL ?>img/games/<?php echo $game["img"] ?>" alt="">
+            <td>Game: <?php echo $game["game_name"] ?></td>
+            <td>Description: <?php echo $game["description"] ?></td>
+            <td>Developer: <?php echo $game["developer"] ?></td>
+            <td>Publisher: <?php echo $game["publisher"] ?></td>
+            <td>Release: <?php echo $game["releasedate"] ?></td>
+            <td>Genre: <?php echo $game["genre"] ?></td>
+            <td>Platform: <?php echo $game["platform"] ?></td>
+            <td>Spots: <?php echo $game["total_spots"] ?></td>
+     
             <td>
 
             </td>
