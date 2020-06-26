@@ -10,6 +10,15 @@ function getAllGenres() {
     return $query->fetchAll();
 }
 
+function getAllMedia() {
+    $conn = openDatabaseConnection();
+
+    $query = $conn->prepare("SELECT * FROM media");
+    $query->execute();
+
+    return $query->fetchAll();
+}
+
 function getAllPlatforms() {
     // functie om alle platforms op te halen uit de database
     $conn = openDatabaseConnection();
