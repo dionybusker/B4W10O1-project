@@ -14,8 +14,8 @@
     <?php foreach ($tournaments as $result) { ?>
         <tr>
             <td><?php echo $result["tournament_id"] ?></td>
-            <td><?php echo $result["game_id"] ?></td>
-            <td><?php echo $result["user_id"] ?></td>
+            <td><?php echo $result["game_name"] ?></td>
+            <td><?php echo $result["full_name"] ?></td>
             <td>
                 <a class="p-1 btn btn-custom-blue" href='#'>
                     <i class="fas fa-user-alt"></i>
