@@ -22,7 +22,7 @@
     function edit($id) {
         // variabele om een specifieke user op te halen uit de database
         // juiste pagina weergeven in de view
-        $tournaments = getTournament($id);
+        $tournament = getTournament($id);
         render('tournaments/update', array('tournaments' => $tournament));
     }
     
@@ -38,9 +38,9 @@
     function delete($id) {
         // variabele om een specifieke user op te halen uit de database
         // juiste pagina weergeven voor de view
-        $tournaments = getTournament($id);
+        $tournament = getTournament($id);
         //2. Geef een view weer voor het verwijderen en geef de variable met medewerker hieraan mee
-        render('tournaments/delete', array('tournaments' => $tournaments));
+        render('tournaments/delete', array('tournaments' => $tournament));
     }
     
     // functie destroy($id) verwijderd de gegevens uit de database
