@@ -34,7 +34,13 @@
         // variabele om een specifieke user op te halen uit de database
         // juiste pagina weergeven in de view
         $tournament = getTournament($id);
-        render('tournaments/update', array('tournaments' => $tournament));
+        $games = getAllGames();
+        $users = getAllUsers();
+        render('tournaments/update', array(
+            'tournament' => $tournament,
+            "games" => $games,
+            "users" => $users
+        ));
     }
     
     // functie update($id) doet de al bestaande gegevens uit de database updaten
