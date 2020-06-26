@@ -1,6 +1,6 @@
 <h1>All tournaments in the database</h1>
 
-<a class="my-2 btn btn-custom-blue rounded-0" href="<?= URL ?>tournaments/create">Add a new user!</a>
+<a class="my-2 btn btn-custom-blue rounded-0" href="<?= URL ?>tournaments/create">Add a new tournament!</a>
 
 <table class="table">
     <tr>
