@@ -6,7 +6,7 @@
     <tr>
         <th>ID</th>
         <th>Game</th>
-        <th>Users</th>
+        <th>User</th>
         <th></th>
         <th></th>
         <th></th>
@@ -22,12 +22,12 @@
                 </a>
             </td>
             <td>
-                <a class="p-1 btn btn-secondary" href='<?= URL ?>tournaments/edit/<?= $result['tournaments_id'] ?>'>
+                <a class="p-1 btn btn-secondary" href='<?= URL ?>tournaments/edit/<?= $result['tournament_id'] ?>'>
                     <i class='fas fa-edit'></i>
                 </a>
             </td>
             <td>
-                <a class='p-1 btn btn-custom-red' href='<?= URL ?>tournaments/delete/<?= $result['tournaments_id'] ?>'>
+                <a class='p-1 btn btn-custom-red' href='<?= URL ?>tournaments/delete/<?= $result['tournament_id'] ?>'>
                     <i class='fas fa-trash-alt'></i>
                 </a>
             </td>
