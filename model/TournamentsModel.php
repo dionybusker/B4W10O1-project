@@ -29,8 +29,8 @@ function createTournament($data) {
     // functie om een user aan te maken en opslaan in de database
     $conn = openDataBaseConnection();
     $insert = $conn->prepare("INSERT INTO tournaments (game_id, user_id) VALUES (:game_id, :user_id)");
-    $insert->bindParam(':game_id', $data['game_id']);
-    $insert->bindParam(':user_id', $data['user_id']);
+    $insert->bindParam(':game_id', $data['game']);
+    $insert->bindParam(':user_id', $data['user']);
     $insert->execute();
     $conn = null;  
 }
@@ -40,8 +40,8 @@ function updateTournament($id, $data) {
     $conn = openDataBaseConnection();
     $insert = $conn->prepare("UPDATE tournaments SET game_id = :game_id, user_id = :user_id where tournament_id = :id");
     $insert->bindParam(':id', $id);
-    $insert->bindParam(':game_id', $data['game_id']);
-    $insert->bindParam(':user_id', $data['user_id']);
+    $insert->bindParam(':game_id', $data['game']);
+    $insert->bindParam(':user_id', $data['user']);
     $insert->execute();
     $conn = null;
 }

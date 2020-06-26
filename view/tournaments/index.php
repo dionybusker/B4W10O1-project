@@ -34,9 +34,3 @@
         </tr>
     <?php } ?>
 </table>
-
-<?php 
-    print_r($tournaments);
-    print_r($games);
-    print_
-?>
