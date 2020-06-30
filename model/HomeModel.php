@@ -16,10 +16,11 @@ function userLogin($data) {
 
     $validPassword = password_verify($passwordAttempt, $user["password"]);
 
-    if ($validPassword) {
+    if ($validPassword == true) {
+        $_SESSION["loggedin"] = true;
         $_SESSION["user_id"] = $user["user_id"];
 
         header("Location: " . URL . "home/index");
-        exit();
+        // exit();
     }
 }
