@@ -24,20 +24,36 @@ function store() {
     $fullname = validateData(sanitizeData($_POST["full_name"]));
     $email = validateMail(sanitizeData($_POST["email"]));
     $phone = validateData(sanitizeData($_POST["phone"]));
-    $age = validateData(sanitizeData($_POST["age"]));
+    $birthday = validateData(sanitizeData($_POST["birthday"]));
+    $username = validateData(sanitizeData($_POST["username"]));
+    $password = validateData(sanitizeData($_POST["password"]));
+    $passwordRpt = validateData(sanitizeData($_POST["passwordRpt"]));
 
     $error = "";
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        if (empty($fullname) || empty($email) || empty($phone) || empty($age)) {
+        if (empty($fullname) || empty($email) || empty($phone) || empty($birthday) || empty($username) || empty($password) || empty($passwordRpt)) {
             $error = "Please fill in the form.";
-            $valid = false;
+            // $valid = false;
             render("users/create", array(
                 "error" => $error,
                 "fullname" => $fullname,
                 "email" => $email,
                 "phone" => $phone,
-                "age" => $age
+                "birthday" => $birthday,
+                "username" => $username,
+                "password" => $password
+            ));
+        } elseif ($password != $passwordRpt) {
+            $error = "Passwords are not the same.";
+            render("users/create", array(
+                "error" => $error,
+                "fullname" => $fullname,
+                "email" => $email,
+                "phone" => $phone,
+                "birthday" => $birthday,
+                "username" => $username,
+                "password" => $password
             ));
         } else {
             createUser($_POST);

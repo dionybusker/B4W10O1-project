@@ -1,10 +1,14 @@
 <?php
 
-function index()
-{
+require(ROOT . "model/HomeModel.php");
+
+function index() {
 	render("home/index");	
 }
 
-function about() {
-    render("home/about");
+function login() {
+    // if (isset($_POST["login"])) {
+        userLogin($_POST);
+        
+    // }
 }

@@ -26,13 +26,29 @@ function getUser($id) {
 function createUser($data) {
     // functie om een user aan te maken en opslaan in de database
     $conn = openDataBaseConnection();
-    $insert = $conn->prepare("INSERT INTO users (full_name, age, email, phone) VALUES (:full_name, :age, :email, :phone)");
-    $insert->bindParam(':full_name', $data['full_name']);
-    $insert->bindParam(':age', $data['age']);
-    $insert->bindParam(':email', $data['email']);
-    $insert->bindParam(':phone', $data['phone']);
-    $insert->execute();
-    $conn = null;  
+
+    $passwordHash = password_hash($data["password"], PASSWORD_BCRYPT, array("cost" => 12));
+
+    $query = $conn->prepare("SELECT COUNT(username) AS num FROM users WHERE username = :username");
+    $query->bindParam(":username", $data["username"]);
+    $query->execute();
+    $row = $query->fetch();
+
+    // if ($row["num"] > 0) {
+    //     $error = "Username already exists!";
+    // } else {
+        $insert = $conn->prepare("INSERT INTO users (full_name, birthday, email, phone, username, password) VALUES (:full_name, :birthday, :email, :phone, :username, :password)");
+        $insert->bindParam(':full_name', $data['full_name']);
+        $insert->bindParam(':birthday', $data['birthday']);
+        $insert->bindParam(':email', $data['email']);
+        $insert->bindParam(':phone', $data['phone']);
+        $insert->bindParam(':username', $data['username']);
+        $insert->bindParam(':password', $passwordHash);
+        $insert->execute();
+    // }
+
+
+    // $conn = null;  
 }
 
 function updateUser($id, $data) {
@@ -75,7 +91,7 @@ function sanitizeData($data) {
 }
 
 function validateData($data) {
-    if (preg_match("/^[a-zA-Z0-9 .]*$/", $data)) {
+    if (preg_match("/^[a-zA-Z0-9 .-]*$/", $data)) {
         return $data;
     }
 }
