@@ -15,11 +15,14 @@
 	<body class="bg-custom-img">
         <div class="row col-12 m-0 p-0">
             <div class="col-12 bg-custom py-2 text-right">
-                <a class="mx-2 text-white text-decoration-none" href="https://github.com/dionybusker/B4W10O1-project" target="_blank" title="See our Github repository!">
-                    <i class="fab fa-github"></i>
+                <a class="mx-2 text-white text-decoration-none" href="#" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
                 </a>
-                <a class="mx-2 text-white text-decoration-none" href="https://trello.com/b/BXjwJVmJ" target="_blank" title="See our Trello board!">
-                    <i class="fab fa-trello"></i>
+                <a class="mx-2 text-white text-decoration-none" href="#" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a class="mx-2 text-white text-decoration-none" href="#" target="_blank">
+                    <i class="fab fa-instagram"></i>
                 </a>
             </div>
 
