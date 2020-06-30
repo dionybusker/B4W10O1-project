@@ -18,10 +18,14 @@ function login() {
 }
 
 function logout() {
-    session_start();
-    session_unset();
-    session_destroy();
-
+    userLogout();
+    // render("home/index");
     header("Location: " . URL . "home/index");
-    exit();
+
+    // session_start();
+    // session_unset();
+    // session_destroy();
+
+    // render("home/index");
+    // exit();
 }

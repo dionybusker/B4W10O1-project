@@ -24,3 +24,13 @@ function userLogin($data) {
         // exit();
     }
 }
+
+
+function userLogout() {
+    session_start();
+    session_unset();
+    session_destroy();
+
+    // header("Location: " . URL . "home/index");
+    // exit();
+}
