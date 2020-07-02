@@ -24,7 +24,7 @@
     <!-- game media -->
     <div class="col-5 p-0">
         <!-- MAIN IMAGE -->
-        <img class="my-2 img-fluid" src="<?php echo URL ?>img/games/<?php echo $game["main_img"] ?>" alt="">
+        <img class="my-2 img-fluid" src="<?php echo URL ?>img/games/<?php echo $game["img"] ?>" alt="">
 
         <!-- TRAILER/GAMEPLAY -->
         <div class="embed-responsive embed-responsive-16by9">
