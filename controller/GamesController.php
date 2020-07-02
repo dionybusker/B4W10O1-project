@@ -8,10 +8,12 @@ function index() {
     // juiste pagina weergeven in de view
     render("games/index", array('games' => $games));
 }
+
 function detail($id){
-$game = getGame($id);
-render("games/detail", array('game' => $game));
+    $game = getGame($id);
+    render("games/detail", array('game' => $game));
 }
+
 // functie create() laat de juiste pagina zien in de view
 function create() {
     // juiste pagina weergeven in de view
