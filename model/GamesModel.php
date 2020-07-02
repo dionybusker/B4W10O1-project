@@ -33,11 +33,10 @@ function getAllGames() {
     // functie om alle games op te halen uit de database
     $conn = openDatabaseConnection();
 
-    $query = $conn->prepare("SELECT games.*, genres.*, platforms.*, media.*
+    $query = $conn->prepare("SELECT games.*, genres.*, platforms.*
                              FROM games
                              JOIN genres ON genres.genre_id = games.genre_id
                              JOIN platforms ON platforms.platform_id = games.platform_id
-                             JOIN media ON media.media_id = games.media_id
                              ORDER BY game_id");
     $query->execute();
     
@@ -48,11 +47,10 @@ function getGame($id) {
     // functie om een specifieke game op te halen uit de database
     $conn = openDatabaseConnection();
 
-    $query = $conn->prepare("SELECT games.*, genres.*, platforms.*, media.*
+    $query = $conn->prepare("SELECT games.*, genres.*, platforms.*
                              FROM games 
                              JOIN genres ON genres.genre_id = games.genre_id
                              JOIN platforms ON platforms.platform_id = games.platform_id
-                             JOIN media ON media.media_id = games.media_id
                              WHERE game_id = :id");
     $query->bindParam(':id', $id);
     $query->execute();
