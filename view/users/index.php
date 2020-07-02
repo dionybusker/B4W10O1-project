@@ -6,7 +6,7 @@
 
     <?php foreach ($users as $result) { ?>
         <div class=" card border-0 img-container m-2 p-0">
-            <img class="img-fluid img-game custom-wh-img rounded-circle" src="<?php echo URL ?>img/users/<?php echo $result["user_img"] ?>" alt="">
+            <img class="img-fluid img-game custom-wh-img rounded-circle" src="<?php echo URL ?>img/users/<?php if (empty($result["user_img"])) { echo "no-image.jpg"; } else { echo $result["user_img"]; } ?>" alt="">
             <div class="info-game">
                 <h4><?php echo $result["username"] ?></h4>
                 <!-- <a class="p-1 btn btn-custom-blue" href="#"><i class="fas fa-gamepad"></i></a> -->
