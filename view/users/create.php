@@ -12,6 +12,10 @@
     <label class="col-4" for="passwordRpt">Password repeat</label>
     <input class="col-4" type="password" id="passwordRpt" name="passwordRpt">
 
+    <label class="col-4">Image</label>
+    <input class="col-4" type="text" name="img" placeholder="e.g. avatar.jpg" value="<?php echo !empty($error) ? htmlspecialchars($img) : "" ?>">
+
+
 
     <!-- PERSOONLIJKE GEGEVENS -->
     <h5 class="col-12">Personal details</h5>

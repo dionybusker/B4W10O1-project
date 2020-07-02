@@ -37,13 +37,14 @@ function createUser($data) {
     // if ($row["num"] > 0) {
     //     $error = "Username already exists!";
     // } else {
-        $insert = $conn->prepare("INSERT INTO users (full_name, birthday, email, phone, username, password) VALUES (:full_name, :birthday, :email, :phone, :username, :password)");
+        $insert = $conn->prepare("INSERT INTO users (full_name, birthday, email, phone, username, password, user_img) VALUES (:full_name, :birthday, :email, :phone, :username, :password, :img)");
         $insert->bindParam(':full_name', $data['full_name']);
         $insert->bindParam(':birthday', $data['birthday']);
         $insert->bindParam(':email', $data['email']);
         $insert->bindParam(':phone', $data['phone']);
         $insert->bindParam(':username', $data['username']);
         $insert->bindParam(':password', $passwordHash);
+        $insert->bindParam(':img', $data["img"]);
         $insert->execute();
     // }
 
