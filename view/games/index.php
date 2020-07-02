@@ -1,4 +1,4 @@
-<h1>All games in the database</h1>
+<h1>All games</h1>
 
 <a class="my-2 btn btn-custom-blue rounded-0" href="<?=URL?>games/create">Add a new game!</a>
 

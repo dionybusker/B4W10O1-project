@@ -1,35 +1,23 @@
-<h1>All users in the database</h1>
+<h1>All users</h1>
 
-<a class="my-2 btn btn-custom-blue rounded-0" href="<?= URL ?>users/create">Create a new account</a>
+<a class="my-2 btn btn-custom-blue rounded-0" href="<?=URL?>users/create">Create a new account</a>
 
-<table class="table">
-    <tr>
-        <th>Full name</th>
-        <th>Birthday</th>
-        <th>Email</th>
-        <th>Phone</th>
-    </tr>
+<div class="row col-12 justify-content-center">
+
     <?php foreach ($users as $result) { ?>
-        <tr>
-            <td><?php echo $result["full_name"] ?></td>
-            <td><?php echo $result["birthday"] ?></td>
-            <td><?php echo $result["email"] ?></td>
-            <td><?php echo $result["phone"] ?></td>
-            <td>
-                <a class="p-1 btn btn-custom-blue" href='<?= URL ?>users/detail/<?= $result['user_id'] ?>'>
-                    <i class="fas fa-user-alt"></i>
-                </a>
-            </td>
-            <td>
-                <a class="p-1 btn btn-secondary" href='<?= URL ?>users/edit/<?= $result['user_id'] ?>'>
+        <div class=" card border-0 img-container m-2 p-0">
+            <img class="img-fluid img-game custom-wh-img rounded-circle" src="<?php echo URL ?>img/users/<?php echo $result["user_img"] ?>" alt="">
+            <div class="info-game">
+                <h4><?php echo $result["username"] ?></h4>
+                <!-- <a class="p-1 btn btn-custom-blue" href="#"><i class="fas fa-gamepad"></i></a> -->
+                <a class="col-5 p-1 btn btn-custom-blue rounded-0" href='<?= URL ?>users/edit/<?= $result['user_id'] ?>'>
                     <i class='fas fa-edit'></i>
                 </a>
-            </td>
-            <td>
-                <a class='p-1 btn btn-custom-red' href='<?= URL ?>users/delete/<?= $result['user_id'] ?>'>
+                <a class='col-5 p-1 btn btn-custom-red rounded-0' href='<?= URL ?>users/delete/<?= $result['user_id'] ?>'>
                     <i class='fas fa-trash-alt'></i>
                 </a>
-            </td>
-        </tr>
+            </div>
+        </div>
     <?php } ?>
-</table>
+
+</div>
