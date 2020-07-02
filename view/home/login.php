@@ -1,9 +1,9 @@
-<h1>Da Vinci eSports</h1>
-<h5>Welcome on the official Da Vinci eSports website!</h5>
+<!-- <h1>Da Vinci eSports</h1>
+<h5>Welcome on the official Da Vinci eSports website!</h5> -->
 
 <!-- log in form -->
-<div class="col-6">
-    <form class="col-12" action="<?php echo URL ?>home/login" method="POST">
+<!-- <div class="col-6">
+    <form class="col-12" action="<?php //echo URL ?>home/login" method="POST">
         <label class="col-5">Gamertag</label>
         <input class="col-5" type="text" name="username">
 
@@ -15,4 +15,4 @@
 </div>
 
 
-
+ -->
