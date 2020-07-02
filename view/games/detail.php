@@ -12,12 +12,8 @@
             Spots: <?php echo $game["total_spots"] ?> <br><br>
             Description: <?php echo $game["description"] ?> <br><br>
             
-            <a class="p-1 btn btn-secondary" href="<?=URL?>games/edit/<?= $game['game_id'] ?>">
-                <i class="fas fa-edit"></i>
-            </a>
-            <a class="p-1 btn btn-danger" href="<?=URL?>games/delete/<?= $game['game_id'] ?>">
-                <i class="fas fa-trash-alt"></i>
-            </a>
+            <a class="col-3 p-1 btn btn-custom-blue" href="<?=URL?>games/edit/<?= $game['game_id'] ?>">Edit this game!</a>
+            <a class="col-3 p-1 btn btn-custom-red" href="<?=URL?>games/delete/<?= $game['game_id'] ?>">Delete this game!</a>
         </p>
     </div>
 
