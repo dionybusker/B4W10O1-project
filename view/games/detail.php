@@ -23,16 +23,40 @@
 
     <!-- game media -->
     <div class="col-5 p-0">
-        <!-- image van de game -->
-        <img class="img-fluid" src="<?php echo URL ?>img/games/<?php echo $game["img"] ?>" alt="">
+        <!-- MAIN IMAGE -->
+        <img class="my-2 img-fluid" src="<?php echo URL ?>img/games/<?php echo $game["main_img"] ?>" alt="">
 
-        <!-- trailer/gameplay -->
-        <!-- <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/dushZybUYnM"></iframe>
-        </div> -->
+        <!-- TRAILER/GAMEPLAY -->
+        <div class="embed-responsive embed-responsive-16by9">
+            <!-- <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/dushZybUYnM"></iframe> -->
+            <iframe class="embed-responsive-item" src="<?php echo $game["link"] ?>"></iframe>
+        </div>
 
-        <div>
-            <!-- hier komt de slideshow -->
+        <!-- SLIDESHOW -->
+        <div id="slideshow" class="my-2 carousel slide" data-ride="carousel">
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="<?php echo URL ?>img/slides/<?php echo $game["first_slide"] ?>" alt="first slide">
+                </div>
+
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="<?php echo URL ?>img/slides/<?php echo $game["second_slide"] ?>" alt="second slide">
+                </div>
+
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="<?php echo URL ?>img/slides/<?php echo $game["third_slide"] ?>" alt="third slide">
+                </div>
+            </div>
+
+            <a class="carousel-control-prev" href="#slideshow" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+
+            <a class="carousel-control-next" href="#slideshow" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
     </div>
     

@@ -6,7 +6,7 @@
 
     <?php foreach ($games as $result) { ?>
         <div class="col-3 card border-0 img-container m-2 p-0">
-            <img class="img-fluid img-game custom-wh-img" src="<?php echo URL ?>img/games/<?php echo $result["img"] ?>" alt="">
+            <img class="img-fluid img-game custom-wh-img" src="<?php echo URL ?>img/games/<?php echo $result["main_img"] ?>" alt="">
             <div class="info-game">
                 <h4><?php echo $result["game_name"] ?></h4>
                 <a class="p-1 btn btn-custom-blue" href="<?php echo URL ?>games/detail/<?= $result['game_id'] ?>"><i class="fas fa-gamepad"></i></a>
