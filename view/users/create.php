@@ -23,7 +23,7 @@
     <input class="col-4" type='text' id='full_name' name='full_name' value="<?php echo !empty($error) ? htmlspecialchars($fullname) : "" ?>">
 
     <label class="col-4" for='birthday'>Birthday</label>
-    <input class="col-4" type='text' id='birthday' name='birthday' value="<?php echo !empty($error) ? htmlspecialchars($birthday) : "" ?>">
+    <input class="col-4" type='date' id='birthday' name='birthday' value="<?php echo !empty($error) ? htmlspecialchars($birthday) : "" ?>">
 
     <label class="col-4" for='email'>E-mail address</label>
     <input class="col-4" type='email' id='email' name='email' value="<?php echo !empty($error) ? htmlspecialchars($email) : "" ?>">
