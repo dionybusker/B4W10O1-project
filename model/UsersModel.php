@@ -92,7 +92,7 @@ function sanitizeData($data) {
 }
 
 function validateData($data) {
-    if (preg_match("/^[a-zA-Z0-9 .-]*$/", $data)) {
+    if (preg_match("/^[a-zA-Z0-9 .-_]*$/", $data)) {
         return $data;
     }
 }
