@@ -10,8 +10,8 @@
     <label class="col-4" for='phone'>Phone number</label>
     <input class="col-4" type='text' id='phone' name='phone' value='<?= $users['phone'] ?>'>
 
-    <label class="col-4" for='age'>Age</label>
-    <input class="col-4" type='text' id='age' name='age' value='<?= $users['age'] ?>'>
+    <label class="col-4" for='birthday'>Birthday</label>
+    <input class="col-4" type='date' id='birthday' name='birthday' value='<?= $users['birthday'] ?>'>
 
     <input class="col-4 my-2 btn btn-custom-blue rounded-0" type='submit' value='Update!'>
 </form>
