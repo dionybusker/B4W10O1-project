@@ -1,3 +1,5 @@
+<?php session_start();  ?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -43,6 +45,8 @@
                             <!-- <li class="nav-item m-0 p-0 shadow-lg width-250 btn btn-custom-red rounded-0"><a class="nav-link text-white" href="<?php echo URL ?>users/index"><i class="fas fa-headset"></i> Users</a></li> -->
                             <li class="nav-item m-0 p-0 shadow-lg width-250 btn btn-custom-red rounded-0"><a class="nav-link text-white" href="<?php echo URL ?>tournaments/index"><i class="fas fa-trophy"></i> Tournament</a></li>
                             <li class="nav-item m-0 p-0 shadow-lg width-250 btn btn-custom-red rounded-0"><a class="nav-link text-white" href="<?php echo URL ?>users/index"><i class="fas fa-user-alt"></i> Register account</a></li>
+                            <li class="nav-item m-0 p-0 shadow-lg width-250 btn btn-custom-red rounded-0"><a class="nav-link text-white" href="<?php echo URL ?>login/index"><i class="fas fa-sign-in-alt"></i> Sign in</a></li>
+                            <li class="nav-item m-0 p-0 shadow-lg width-250 btn btn-custom-red rounded-0"><a class="nav-link text-white" href="<?php echo URL ?>login/logout"><i class="fas fa-sign-out-alt"></i> Sign out</a></li>
                         </ul>
                     </div>
                 </div>
