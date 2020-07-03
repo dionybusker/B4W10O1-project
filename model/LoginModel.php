@@ -61,7 +61,7 @@ function userLogin($data) {
         if ($count == 1) {
             $_SESSION["username"] = $username;
             $_SESSION["loggedin"] = true;
-            header("Location: " . URL . "home/index");
+          //  header("Location: " . URL . "home/index");
         } else {
             $_SESSION["loggedin"] = false;
             // echo "didn't work";

@@ -30,8 +30,10 @@ function login() {
     //     $username = $_POST["username"];
     //     $password = $_POST["password"];
 
-    // }
+    // }   
+    header("Location: " . URL . "home/index");
 }
+ 
 
 // function signin() {
 //     header("Location: " . URL . "home/index");
